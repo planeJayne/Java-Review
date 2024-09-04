@@ -21,7 +21,7 @@ public class Employee {
 
     //method for work
     public String work(){
-        return "Name: " + name + "worked.";
+        return "Name: " + name + "worked."; //doesnt need name
 
     }
 
