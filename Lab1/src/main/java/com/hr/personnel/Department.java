@@ -1,36 +1,38 @@
 package com.hr.personnel;
 
-
+import java.time.LocalDate;
 
 public class Department {
 
-    //fields
+    // Fields
     private String name;
     private String location;
     private int currentIndex = 0;
     private Employee[] employees = new Employee[100];
 
-    //constructor
+    // Constructor
     public Department(String name, String location) {
         this.name = name;
         this.location = location;
-//        this.employees = new Employee[100];
-//        this.currentIndex = 0;
     }
 
+    // Method to add an employee
     public void addEmployee(Employee employee) {
-        if (currentIndex < employees.length)
+        if (currentIndex < employees.length) {
             employees[currentIndex] = employee;
             currentIndex++;
         }
     }
 
-    public void letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked() {
+    // Method to let employees work and return the number of employees who worked
+    public int letEmployeesWorkAndReturnNumberOfEmployeesWhoWorked() {
         int count = 0;
         for (int i = 0; i < currentIndex; i++) {
-//            employees[i].work();
+            String peopleWorked = employees[i].work();
+            if (peopleWorked.contains("worked")) {
+                count++;
+            }
         }
+        return count;
     }
-
-
-
+}

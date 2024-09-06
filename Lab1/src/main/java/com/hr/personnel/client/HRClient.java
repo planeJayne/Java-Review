@@ -12,10 +12,10 @@ public class HRClient {
     public static void main(String[] args) {
         Department dept = new Department("IT", "Atlanta");
 
-        SalariedEmployee semp1 = new SalariedEmployee("Justin", 6100);
-        SalariedEmployee semp2 = new SalariedEmployee("Ashley", 4300);
+        SalariedEmployee semp1 = new SalariedEmployee("Nathan",LocalDate.of(2010,12,25), 3500);
+        SalariedEmployee semp2 = new SalariedEmployee("Ashley", LocalDate.of(2014, 11, 8),7500);
 
-        HourlyEmployee hemp1 = new HourlyEmployee("Nathan", 160,33.50);
+        HourlyEmployee hemp1 = new HourlyEmployee("Maya", LocalDate.of(1999,9,27),160, 33);
 
         dept.addEmployee(semp1);
         dept.addEmployee(semp2);

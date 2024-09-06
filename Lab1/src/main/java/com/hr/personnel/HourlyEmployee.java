@@ -1,13 +1,15 @@
 package com.hr.personnel;
 
+import java.time.LocalDate;
+
 public class HourlyEmployee extends Employee{
 
     //fields
     private int hoursWorkedPerMonth;
     private double hourlyRate;
 
-    public HourlyEmployee(String name, int hoursWorkedPerMonth, double hourlyRate) {
-        super(name);
+    public HourlyEmployee(String name, LocalDate hireDate, int hoursWorkedPerMonth, double hourlyRate) {
+        super(name, hireDate);
         this.hoursWorkedPerMonth = hoursWorkedPerMonth;
         this.hourlyRate = hourlyRate;
 

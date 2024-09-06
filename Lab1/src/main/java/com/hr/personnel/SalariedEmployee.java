@@ -1,6 +1,8 @@
 package com.hr.personnel;
 
 
+import java.time.LocalDate;
+
 public class SalariedEmployee extends Employee{
 
     //fields
@@ -8,8 +10,8 @@ public class SalariedEmployee extends Employee{
 
 
     //constructor
-    public SalariedEmployee(String name, double monthlySalary){
-        this.setName(name);
+    public SalariedEmployee(String name, LocalDate hireDate, double monthlySalary){
+        super(name, hireDate);
         this.monthlySalary(monthlySalary);
     }
 
