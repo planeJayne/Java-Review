@@ -35,4 +35,14 @@ public class Department {
         }
         return count;
     }
+
+    // Compute total monthly compensation of all
+    // employees in that department
+    public double computeDepartmentMonthlyTotalCompensation() {
+        double deptEarnings = 0.0;
+        for (int i = 0; i < currentIndex; i++) {
+            deptEarnings += employees[i].computeMonthlyComp();
+        }
+        return deptEarnings;
+    }
 }

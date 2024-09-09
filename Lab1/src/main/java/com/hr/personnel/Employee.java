@@ -3,7 +3,7 @@ package com.hr.personnel;
 
 import java.time.LocalDate;
 
-public class Employee {
+public abstract class Employee {
     String name;
     LocalDate hireDate;
 
@@ -18,6 +18,8 @@ public class Employee {
     public String getEmployeeInfo(){
         return "Name: " + name + " Hire Date: " + hireDate;
     }
+
+    public  abstract double computeMonthlyComp();
 
     //method for work
     public String work(){

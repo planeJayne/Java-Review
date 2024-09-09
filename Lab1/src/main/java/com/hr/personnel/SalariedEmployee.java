@@ -34,5 +34,10 @@ public class SalariedEmployee extends Employee{
         return getName() + " worked.";
     }
 
+    @Override
+    public double computeMonthlySalary(){
+        return monthlySalary;
+    }
+
 
 }

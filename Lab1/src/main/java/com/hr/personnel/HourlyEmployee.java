@@ -34,6 +34,11 @@ public class HourlyEmployee extends Employee{
     }
 
     @Override
+    public double computeMonthlyCompensation(){
+        return hourlyRate * hoursWorkedPerMonth;
+    }
+
+    @Override
     public String work(){
         return getName() + " worked.";
     }
